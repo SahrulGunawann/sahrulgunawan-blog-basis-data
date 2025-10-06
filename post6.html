@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post 6 - Attribute, Entitas, dan Relasi dalam ERD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"><span>Sahrul Gunawan</span> | Basis Data</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="post1.html">Post 1</a></li>
+          <li><a href="post2.html">Post 2</a></li>
+          <li><a href="post3.html">Post 3</a></li>
+          <li><a href="post4.html">Post 4</a></li>
+          <li><a href="post5.html">Post 5</a></li>
+          <li><a href="post6.html" class="active">Post 6</a></li>
+          <li>
+            <a href="https://www.ubpkarawang.ac.id" target="_blank">UBP</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="post-container fade-in">
+      <h2>Post 6: Attribute, Entitas, dan Relasi dalam ERD</h2>
+
+      <p>
+        <b>Entity Relationship Diagram (ERD)</b> adalah model konseptual yang
+        digunakan untuk menggambarkan hubungan antar data dalam sistem basis
+        data. ERD terdiri dari tiga komponen utama yaitu <b>Entitas</b>,
+        <b>Attribute</b>, dan <b>Relasi</b>.
+      </p>
+
+      <h3>1. Entitas (Entity)</h3>
+      <p>
+        Entitas adalah objek atau hal nyata yang memiliki data untuk disimpan
+        dalam basis data. Contohnya: <b>Mahasiswa</b>, <b>Dosen</b>,
+        <b>Mata Kuliah</b>, atau <b>Transaksi</b>.
+      </p>
+      <p>
+        Dalam ERD, entitas biasanya digambarkan dengan persegi panjang
+        (<code>rectangle</code>).
+      </p>
+
+      <h3>2. Atribut (Attribute)</h3>
+      <p>
+        Atribut adalah <b>karakteristik</b> atau <b>sifat</b> yang dimiliki oleh
+        suatu entitas. Misalnya entitas <b>Mahasiswa</b> memiliki atribut
+        seperti:
+      </p>
+
+      <table
+        border="1"
+        cellpadding="6"
+        cellspacing="0"
+        style="border-collapse: collapse; width: 100%"
+      >
+        <tr style="background-color: #e0f0ff; text-align: left">
+          <th>Nama Atribut</th>
+          <th>Tipe Data</th>
+          <th>Keterangan</th>
+        </tr>
+        <tr>
+          <td>NIM</td>
+          <td>VARCHAR(10)</td>
+          <td>Nomor Induk Mahasiswa (Primary Key)</td>
+        </tr>
+        <tr>
+          <td>Nama</td>
+          <td>VARCHAR(50)</td>
+          <td>Nama lengkap mahasiswa</td>
+        </tr>
+        <tr>
+          <td>Alamat</td>
+          <td>VARCHAR(100)</td>
+          <td>Alamat tempat tinggal</td>
+        </tr>
+        <tr>
+          <td>Tanggal_Lahir</td>
+          <td>DATE</td>
+          <td>Tanggal lahir mahasiswa</td>
+        </tr>
+      </table>
+
+      <h3>3. Relasi (Relationship)</h3>
+      <p>
+        Relasi menggambarkan <b>hubungan antar entitas</b> dalam sistem basis
+        data. Contohnya:
+      </p>
+      <ul>
+        <li>
+          Entitas <b>Mahasiswa</b> memiliki relasi dengan
+          <b>MataKuliah</b> melalui tabel <b>KRS</b>.
+        </li>
+        <li>
+          Entitas <b>Dosen</b> memiliki relasi dengan <b>MataKuliah</b> sebagai
+          pengajar.
+        </li>
+      </ul>
+
+      <p>
+        Dalam ERD, relasi digambarkan dengan bentuk belah ketupat
+        (<code>diamond</code>), dan biasanya disertai garis penghubung antar
+        entitas.
+      </p>
+
+      <h3>Kesimpulan</h3>
+      <p>
+        ERD membantu perancang sistem memahami bagaimana data saling terhubung
+        dan bagaimana struktur tabel akan dibentuk di database. Dengan memahami
+        entitas, atribut, dan relasi, kita dapat membuat desain basis data yang
+        efisien dan terstruktur.
+      </p>
+
+      <a href="index.html" class="btn-back">⬅ Kembali ke Home</a>
+    </main>
+
+    <footer>
+      <p>
+        © 2025 | Sahrul Gunawan - 24416255201104 - Teknik Informatika UBP
+        Karawang
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
