@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post 10 - Normalisasi pada ERD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"><span>Sahrul Gunawan</span> | Basis Data</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="post1.html">Post 1</a></li>
+          <li><a href="post2.html">Post 2</a></li>
+          <li><a href="post3.html">Post 3</a></li>
+          <li><a href="post4.html">Post 4</a></li>
+          <li><a href="post5.html">Post 5</a></li>
+          <li><a href="post6.html">Post 6</a></li>
+          <li><a href="post7.html">Post 7</a></li>
+          <li><a href="post8.html">Post 8</a></li>
+          <li><a href="post9.html">Post 9</a></li>
+          <li><a href="post10.html" class="active">Post 10</a></li>
+          <li>
+            <a href="https://www.ubpkarawang.ac.id" target="_blank">UBP</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="post-container fade-in">
+      <h2>Post 10: Normalisasi pada ERD</h2>
+      <p>
+        <b>Normalisasi</b> adalah proses untuk menyusun tabel dalam basis data
+        agar data tidak redundan (berulang) dan integritas data tetap terjaga.
+        Normalisasi dilakukan melalui beberapa tahap yang disebut
+        <b>normal form</b>.
+      </p>
+
+      <h3>1️⃣ Bentuk Normal Pertama (1NF)</h3>
+      <p>
+        Setiap kolom harus berisi nilai tunggal (atomik). Tidak boleh ada data
+        ganda dalam satu kolom.
+      </p>
+      <pre>
+Contoh ❌:
+| Nama | Hobi          |
+|------|---------------|
+| Rani | Membaca, Menulis |
+
+Contoh ✅:
+| Nama | Hobi     |
+|------|----------|
+| Rani | Membaca  |
+| Rani | Menulis  |
+      </pre>
+
+      <h3>2️⃣ Bentuk Normal Kedua (2NF)</h3>
+      <p>
+        Setiap atribut non-key harus bergantung sepenuhnya pada primary key.
+        Tahap ini menghapus ketergantungan parsial.
+      </p>
+
+      <h3>3️⃣ Bentuk Normal Ketiga (3NF)</h3>
+      <p>
+        Atribut non-key tidak boleh bergantung pada atribut non-key lainnya.
+        Tahap ini menghapus ketergantungan transitif.
+      </p>
+
+      <h3>📊 Contoh Penerapan Normalisasi</h3>
+      <table>
+        <tr>
+          <th>Tabel Asal</th>
+          <th>Masalah</th>
+          <th>Solusi</th>
+        </tr>
+        <tr>
+          <td>Transaksi (ID, Nama_Pelanggan, ID_Pelanggan, Produk)</td>
+          <td>Data pelanggan berulang</td>
+          <td>Pisahkan tabel Pelanggan</td>
+        </tr>
+        <tr>
+          <td>Pelanggan (ID_Pelanggan, Nama_Pelanggan)</td>
+          <td>Data unik</td>
+          <td>Hubungkan ke Transaksi lewat Foreign Key</td>
+        </tr>
+      </table>
+
+      <p>
+        Dengan normalisasi, desain ERD menjadi lebih efisien, mudah diubah, dan
+        menghindari anomali data saat melakukan operasi CRUD.
+      </p>
+
+      <a href="index.html" class="btn-back">⬅ Kembali ke Home</a>
+    </main>
+
+    <footer>
+      <p>© 2025 | Sahrul Gunawan - Teknik Informatika UBP Karawang</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
